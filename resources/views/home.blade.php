@@ -1,9 +1,26 @@
-@extends("layouts.base")
-@section("title","Home")
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Dischi</title>
+</head>
+<body>
+    <div class ="container">
+        @foreach ($data[0] as $cd )
+            <div class = "box">
+                <img src="{{ $cd["poster"] }}" alt="">
+                <h3>{{ $cd["title"] }}</h3>
+                <h3>{{ $cd["author"] }}</h3>
+                <h3>{{ $cd["genre"] }}</h3>
+                <h3>{{ $cd["year"] }}</h3>
+            </div>
+            
+        @endforeach
+    </div>
 
-
-@section("main")
-
-<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quia temporibus quo quos accusamus consequatur? Perspiciatis, dolorem ab quas hic dolorum accusamus nesciunt esse explicabo voluptatibus dolores architecto aspernatur tenetur blanditiis. Facilis aliquam similique voluptatum rerum ratione modi, soluta sunt. Sint repudiandae aliquam adipisci, omnis aut possimus minima facere tempora, quae et, ad blanditiis enim libero ipsam nostrum culpa consequatur deserunt! Iure ad laudantium alias deserunt vero ullam natus, tenetur dolor magnam vitae quam vel voluptates? Eius, laudantium quod quibusdam reiciendis odit sed voluptatum! Praesentium quia laboriosam, nobis, eum minus non natus doloremque facilis voluptate pariatur asperiores deserunt provident illum quis.</p>
-
-@endsection
+    
+</body>
+</html>
